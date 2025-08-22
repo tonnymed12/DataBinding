@@ -39,7 +39,7 @@
 			"settings": {
 				"bundleName": "ui5.databinding.i18n.i18n",
 				"supportedLocales": ["", "es"],
-				"fallbackLocale": "en"
+				"fallbackLocale": ""
 			}
 		}
 	}
