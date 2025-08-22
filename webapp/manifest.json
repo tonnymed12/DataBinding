@@ -32,7 +32,7 @@
 	"models": {
 		"": {
 			"type": "sap.ui.model.json.JSONModel",
-			"uri": "model/data.json"
+			"uri": "./model/data.json"
 		}
 	}
 }
