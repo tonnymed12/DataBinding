@@ -2,7 +2,9 @@
 	xmlns="sap.m"
 	xmlns:form="sap.ui.layout.form"
 	xmlns:l="sap.ui.layout"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	core:require="{Currency: 'sap/ui/model/type/Currency'}">
 	<Panel headerText="{i18n>panelHeaderText}" class="sapUiResponsiveMargin" width="auto">
 		<form:SimpleForm editable="true" layout="ColumnLayout">
 			<Label text="{i18n>firstName}"/>
@@ -27,6 +29,18 @@
 						formatter: '.formatMail'
 					}" text="{i18n>sendEmail}"/>
 			</l:VerticalLayout>
+							<l:VerticalLayout>
+					<Label labelFor="salesAmount" text="{i18n>salesAmount}:"/>
+					<Input description="{/currencyCode}" enabled="{/enabled}" id="salesAmount"
+						value="{
+							parts: [
+								{path: '/salesAmount'},
+								{path: '/currencyCode'}
+							],
+							type: 'Currency',
+							formatOptions: {showMeasure: false}
+						}" width="200px"/>
+				</l:VerticalLayout>
 		</content>
 	</Panel>
 </mvc:View>
